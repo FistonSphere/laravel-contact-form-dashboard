@@ -7,12 +7,77 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Welcome</title>
 </head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #070707;
+        font-family: 'poppins', sans-serif;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container .card {
+        width: 400px;
+        height: 300px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(255, 254, 254, 0.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container .card .content {
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    .container .card .content h3 {
+        color: #070707;
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .container .card .btn {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+    }
+
+    .container .card .btn button {
+        width: 100%;
+        height: 50px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        padding: 0 20px;
+    }
+
+    .container .card .btn button:hover {
+        background-color: #070707;
+        color: #fff;
+    }
+</style>
 
 <body>
     <div class="container">
         <div class="card">
             <div class="content">
-                <h3>Welcome on Form contacting page.</h3>
+                <h3>Welcome Back 👋.</h3>
             </div>
             <div class="btn">
                 <div class="login">

@@ -1,64 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+body {
+    background-color: #070707;
+    font-family: "poppins", sans-serif;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container .card {
+    width: 400px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 254, 254, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card .content {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.container .card .content h3 {
+    color: #070707;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.container .card .btn {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.container .card .btn button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    padding: 0 20px;
+}
+
+.container .card .btn button:hover {
+    background-color: #070707;
+    color: #fff;
+}
+.container .card .btn .b1 {
+    background-color: #E90B00;
+    color: #fff;
+    animation: pulse 1s infinite;
+}
+
+.container .card .btn .b2 {
+    background-color: #fff;
+    color: #070707;
+    border: 1px solid #070707;
+    animation: pulse 1s infinite;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
     }
-
-    body {
-        background-color: #070707;
-        font-family: 'poppins', sans-serif;
+    50% {
+        transform: scale(1.05);
     }
-
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+    100% {
+        transform: scale(1);
     }
-
+}
+@media (max-width: 600px) {
     .container .card {
-        width: 400px;
-        height: 300px;
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(255, 254, 254, 0.5);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .container .card .content {
-        text-align: center;
-        margin-bottom: 70px;
+        width: 90%;
+        height: auto;
+        padding: 20px;
     }
 
     .container .card .content h3 {
-        color: #070707;
-        font-size: 30px;
-        font-weight: 600;
-    }
-
-    .container .card .btn {
-        display: flex;
-        justify-content: space-between;
-        width: 80%;
+        font-size: 24px;
     }
 
     .container .card .btn button {
-        width: 100%;
-        height: 50px;
-        border: none;
-        border-radius: 5px;
-        font-size: 18px;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-        padding: 0 20px;
+        font-size: 16px;
+        padding: 0 15px;
     }
-
-    .container .card .btn button:hover {
-        background-color: #070707;
-        color: #fff;
-    }
+}

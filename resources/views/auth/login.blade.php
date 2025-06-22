@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ asset('assets/css/auth.css') }}">
     <title>Login</title>
 </head>
+
 
 <body>
     <div class="container">
@@ -24,7 +26,7 @@
                 <button type="submit" class="btn btn-primary">Login</button>
             </div>
             <div class="form-group">
-                <a href="{{ route('register') }}">Don't have an account? Register here</a>
+                <a href="{{ route('register') }}">Don't have an account?<span> Register here</span></a>
             </div>
 
         </form>

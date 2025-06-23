@@ -35,7 +35,7 @@
                 <button type="submit" class="btn btn-primary">Login</button>
             </div>
             <div class="form-group">
-                <a href="{{ route('register') }}">Don't have an account?<span> Register here</span></a>
+                <a href="{{ route('login') }}">Do you have an account?<span> Login here</span></a>
             </div>
 
         </form>

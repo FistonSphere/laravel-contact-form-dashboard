@@ -47,6 +47,17 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 ## Contributing
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# Fork the repo
+# Create your feature branch
+git checkout -b feature/awesome-feature
+
+# Commit your changes
+git commit -m "Add awesome feature"
+
+# Push to the branch
+git push origin feature/awesome-feature
+
+# Open a pull request
 
 ## Code of Conduct
 

@@ -37,10 +37,10 @@
                     required>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">Login</button>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
             </div>
             <div class="form-group">
-                <a href="{{ route('login') }}">Do you have an account?<span> Login here</span></a>
+                <a href="{{ route('login') }}">Do you have an account?<span> Sign In here</span></a>
             </div>
 
         </form>

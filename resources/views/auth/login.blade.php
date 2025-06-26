@@ -23,10 +23,10 @@
                 <input type="password" name="password" id="password" class="form-control" required>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">Login</button>
+                <button type="submit" class="btn btn-primary">Sign In</button>
             </div>
             <div class="form-group">
-                <a href="{{ route('register') }}">Don't have an account?<span> Register here</span></a>
+                <a href="{{ route('register') }}">Don't have an account?<span> Sign Up here</span></a>
             </div>
 
         </form>

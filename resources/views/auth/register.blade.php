@@ -16,11 +16,16 @@
             @csrf
             <div class="form-group">
                 <label for="name">Full Name:</label>
-                <input type="text" name="fname" id="fname" class="form-control" required>
+                <input type="text" name="fname" id="fname" value="{{ old('fname') }}" class="form-control"
+                    required>
+                @error('fname')
+                    <span>{{ $message }}</span>
+                @enderror
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email" class="form-control" required>
+                <input type="email" name="email" id="email" value="{{ old('email') }}" class="form-control"
+                    required>
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>

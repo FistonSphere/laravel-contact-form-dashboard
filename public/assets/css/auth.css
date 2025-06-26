@@ -57,3 +57,11 @@ form span {
 form a:hover {
     text-decoration: underline;
 }
+
+.profile-widget.rent-list-view .pro-img img,
+.profile-widget.rent-list-view .doc-img img {
+    border-radius: 0;
+    max-width: 345px;
+    height: 100%;
+    object-fit: cover;
+}

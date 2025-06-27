@@ -12,7 +12,7 @@
 
 <body>
     <div class="container">
-        <form action="{{ route('register.post') }}">
+        <form action="{{ route('register.post') }}" method="post">
             @csrf
             <div class="form-group">
                 <label for="name">Full Name:</label>

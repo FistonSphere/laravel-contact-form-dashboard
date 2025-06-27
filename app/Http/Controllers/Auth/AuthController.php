@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -33,6 +34,7 @@ class AuthController extends Controller
 
     public function register(Request $request)
     {
+        
         $request->validate([
             'fname' => 'required|string|max:255',
             'password' => 'required|string|min:6|confirmed',
@@ -48,8 +50,7 @@ class AuthController extends Controller
 
         $user = new User();
         $user->fname = $request->input('fname');
-        $user->email = $request->input('email');
-        $user->password = bcrypt($request->input('password'));
+        $user->password = Hash::make($request->input('password'));
         $user->save();
         return redirect()->route('login')->with('success', 'Registration successful, please login');
     }

@@ -9,10 +9,28 @@
     <title>Login</title>
 </head>
 
-
+<style>
+    .alert {
+        margin: 20px auto;
+        width: 80%;
+        text-align: center;
+    }
+    .alert-success {
+        color: #155724;
+        background-color: #d4edda;
+        border-color: #c3e6cb;
+        padding: 15px;
+        border-radius: 5px;
+    }
+</style>
 <body>
+    @session('success')
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+    @endsession
     <div class="container">
-        <form action="{{ route('login.post') }}">
+        <form action="{{ route('login.post') }}" method="post">
             @csrf
             <div class="form-group">
                 <label for="email">Email:</label>

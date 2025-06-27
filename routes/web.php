@@ -15,3 +15,9 @@ Route::get('/register', function () {
 })->name('register');
 Route::post('/login', [AuthController::class, 'login'])->name('login.post');
 Route::post('/register-save', [AuthController::class, 'register'])->name('register.post');
+
+Route::group(['middleware'=>'auth'], function(){
+Route::get('/dashboard', function(){
+    return view('dashboard');
+});
+});

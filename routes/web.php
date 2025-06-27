@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -18,6 +19,11 @@ Route::post('/register-save', [AuthController::class, 'register'])->name('regist
 
 Route::group(['middleware'=>'auth'], function(){
 Route::get('/dashboard', function(){
-    return view('dashboard');
+    return view('dashboard.index');
+})->name('dashboard');
+
+Route::post('logout', function(){
+    Auth::logout();
+    return redirect()->route('login')->with('success', 'Logout successful');
 });
 });

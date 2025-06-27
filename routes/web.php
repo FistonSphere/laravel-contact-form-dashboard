@@ -25,5 +25,5 @@ Route::get('/dashboard', function(){
 Route::post('logout', function(){
     Auth::logout();
     return redirect()->route('login')->with('success', 'Logout successful');
-});
+})->name('logout');
 });

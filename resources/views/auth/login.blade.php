@@ -15,6 +15,7 @@
         width: 80%;
         text-align: center;
     }
+
     .alert-success {
         color: #155724;
         background-color: #d4edda;
@@ -23,11 +24,12 @@
         border-radius: 5px;
     }
 </style>
+
 <body>
     @session('success')
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
     @endsession
     <div class="container">
         <form action="{{ route('login.post') }}" method="post">
@@ -49,6 +51,16 @@
 
         </form>
     </div>
+
+    <script>
+        let alert - success = document.querySelector(.
+            'alert-success');
+        if (alert - success) {
+            setTimeout(() => {
+                alert - success.style.display = 'none';
+            }, 3000)
+        }
+    </script>
 </body>
 
 </html>

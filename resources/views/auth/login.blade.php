@@ -26,11 +26,21 @@
 </style>
 
 <body>
-    @session('success')
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
-    @endsession
+  @if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+
+    <script>
+        let alert = document.querySelector('.alert.alert-success');
+        if (alert) {
+            setTimeout(() => {
+                alert.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+@endif
+
     <div class="container">
         <form action="{{ route('login.post') }}" method="post">
             @csrf
@@ -52,15 +62,6 @@
         </form>
     </div>
 
-    <script>
-        let alert - success = document.querySelector(.
-            'alert-success');
-        if (alert - success) {
-            setTimeout(() => {
-                alert - success.style.display = 'none';
-            }, 3000)
-        }
-    </script>
 </body>
 
 </html>

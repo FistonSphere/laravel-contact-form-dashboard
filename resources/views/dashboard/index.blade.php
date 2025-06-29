@@ -12,7 +12,7 @@
             </div>
             <div class="form-group">
                 <label for="message">Message:</label>
-                <textarea name="" id=""></textarea>
+                <textarea name="message" id="message"></textarea>
             </div>
         </form>
     </div>

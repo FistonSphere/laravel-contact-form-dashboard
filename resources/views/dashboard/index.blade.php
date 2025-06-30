@@ -33,7 +33,7 @@
         form.addEventListener('submit', function(event){
             event.preventDefault();
             const formdata = new FormData(form);
-            fetch('/dashboard',{
+            fetch('/send-message',{
                 method:POST,
                 body:formdata,
                 headers:{

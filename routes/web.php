@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\SendMessageController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -26,4 +27,6 @@ Route::post('logout', function(){
     Auth::logout();
     return redirect()->route('login')->with('success', 'Logout successful');
 })->name('logout');
+
+Route::post('/send-message', [SendMessageController::class, 'send'])->name('send.message');
 });

@@ -17,5 +17,11 @@ class SendMessageController extends Controller
         ]);
 
         //send message logic here via gmail or any other service
+        $name = $request->input('name');
+        $email = $request->input('email');
+        $subject = $request->input('subject');
+        $message = $request->input('message');
+
+        //Mail facade functionalitu can be used here
     }
 }

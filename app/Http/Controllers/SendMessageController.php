@@ -29,7 +29,7 @@ class SendMessageController extends Controller
             $saveMessage = new MailMessage();
             $saveMessage->name = $name;
             $saveMessage->email = $email;
-            $saveMessage->customSubject = $customSubject;
+            $saveMessage->subject = $customSubject;
             $saveMessage->message = $Usermessage;
             $saveMessage->save();
             //Mail facade functionalitu can be used here

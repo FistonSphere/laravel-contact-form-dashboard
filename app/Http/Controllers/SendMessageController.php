@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\SendMessage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class SendMessageController extends Controller
 {
@@ -23,5 +25,6 @@ class SendMessageController extends Controller
         $message = $request->input('message');
 
         //Mail facade functionalitu can be used here
+        Mail::to($email)->send(new SendMessage($name, $email, $subject, $message));
     }
 }

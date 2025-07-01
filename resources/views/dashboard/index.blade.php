@@ -43,18 +43,11 @@
     </div>
 </div>
 <script>
-    // document.addEventListener('DOMContentLoaded', function(){
-    //     const form = document.querySelector('.contact-form');
-    //     form.addEventListener('submit', function(event){
-    //         event.preventDefault();
-    //         const formdata = new FormData(form);
-    //         fetch('/send-message',{
-    //             method:POST,
-    //             body:formdata,
-    //             headers:{
-    //                 'X-CRSF-Token':document.querySelector('meta[name="crsf-token"]').getAttribute('content');
-    //             }
-    //         })
-    //     })
-    // })
+    let alertMessage = document.querySelector('.alert');
+
+    if (alertMessage) {
+        setTimeout(() => {
+            alertMessage.style.display = 'none';
+        }, 3000);
+    }
 </script>

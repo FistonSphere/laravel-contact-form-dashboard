@@ -32,7 +32,8 @@ class SendMessage extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Send Message',
+            subject: $this->subject,
+            from: $this->email,
         );
     }
 
@@ -43,6 +44,12 @@ class SendMessage extends Mailable
     {
         return new Content(
             view: 'view.name',
+            with:[
+                'name'=>$this->name,
+                'email'=>$this->email,
+                'message'=>$this->message,
+
+            ]
         );
     }
 

@@ -18,7 +18,7 @@
             <tr>
                 <td>{{ $name }}</td>
                 <td>{{ $email }}</td>
-                <td>{{ $message }}</td>
+                <td>{{ $Usermessage }}</td>
             </tr>
         </tbody>
     </table>

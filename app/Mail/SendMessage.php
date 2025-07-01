@@ -21,7 +21,7 @@ class SendMessage extends Mailable
         public string $name,
         public string $email,
         public string $message,
-        public string $subject,
+        public string $customSubject,
     )
     {
         //
@@ -33,7 +33,7 @@ class SendMessage extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: $this->subject,
+            subject: $this->customSubject,
             from: new Address($this->email, $this->name),
         );
     }

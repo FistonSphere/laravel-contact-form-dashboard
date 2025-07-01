@@ -21,11 +21,11 @@ class SendMessageController extends Controller
         if ($request->has('name') && $request->has('email') && $request->has('subject') && $request->has('message')) {
             $name = $request->input('name');
             $email = $request->input('email');
-            $subject = $request->input('subject');
+            $customSubject = $request->input('subject');
             $message = $request->input('message');
 
             //Mail facade functionalitu can be used here
-            Mail::to($email)->send(new SendMessage($name, $email, $subject, $message));
+            Mail::to($email)->send(new SendMessage($name, $email, $customSubject, $message));
 
             return redirect()->back()->with('success', 'Message sent successfully');
         } else {

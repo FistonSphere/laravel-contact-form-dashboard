@@ -13,16 +13,23 @@
         <form action="" method="post" class="contact-form">
             @csrf
             <div class="form-group">
-                <label for="username">Full Name:</label>
-                <input type="text" name="username" id="username">
+                <label for="name">Full Name:</label>
+                <input type="text" name="name" id="name">
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" name="email" id="email">
             </div>
             <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" name="subject" id="subject">
+            </div>
+            <div class="form-group">
                 <label for="message">Message:</label>
                 <textarea name="message" id="message"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Send Message</button>
             </div>
         </form>
     </div>

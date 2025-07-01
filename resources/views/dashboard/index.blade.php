@@ -1,14 +1,22 @@
-
 <style>
-    *{
-        padding:0;
-        margin:0;
+    * {
+        padding: 0;
+        margin: 0;
         box-sizing: border-box;
     }
-
 </style>
 
+@if (session('success'))
+    <div class="alert alert-success">
+        <p>{{ session('success') }}</p>
+    </div>
+@else
+    <div class="alert alert-error">
+        <p>{{ session('error') }}</p>
+    </div>
+@endif
 <div class="container">
+
     <div class="contact-form">
         <form action="{{ route('send.message') }}" method="post" class="contact-form">
             @csrf

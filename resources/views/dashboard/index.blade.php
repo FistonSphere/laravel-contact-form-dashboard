@@ -41,6 +41,11 @@
             </div>
         </form>
     </div>
+    <div class="btn">
+        <div class="show">
+            //show button
+        </div>
+    </div>
 </div>
 <script>
     let alertMessage = document.querySelector('.alert');

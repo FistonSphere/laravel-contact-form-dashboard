@@ -43,7 +43,7 @@ class SendMessage extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'mail.SendMessage',
             with:[
                 'name'=>$this->name,
                 'email'=>$this->email,

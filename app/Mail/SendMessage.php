@@ -16,7 +16,12 @@ class SendMessage extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct(
+        private string $name,
+        private string $subject,
+        private string $email,
+        private string $message,
+    )
     {
         //
     }

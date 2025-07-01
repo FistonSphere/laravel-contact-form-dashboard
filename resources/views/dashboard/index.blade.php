@@ -10,7 +10,7 @@
 
 <div class="container">
     <div class="contact-form">
-        <form action="" method="post" class="contact-form">
+        <form action="{{ route('send.message') }}" method="post" class="contact-form">
             @csrf
             <div class="form-group">
                 <label for="name">Full Name:</label>
@@ -35,18 +35,18 @@
     </div>
 </div>
 <script>
-    document.addEventListener('DOMContentLoaded', function(){
-        const form = document.querySelector('.contact-form');
-        form.addEventListener('submit', function(event){
-            event.preventDefault();
-            const formdata = new FormData(form);
-            fetch('/send-message',{
-                method:POST,
-                body:formdata,
-                headers:{
-                    'X-CRSF-Token':document.querySelector('meta[name="crsf-token"]').getAttribute('content');
-                }
-            })
-        })
-    })
+    // document.addEventListener('DOMContentLoaded', function(){
+    //     const form = document.querySelector('.contact-form');
+    //     form.addEventListener('submit', function(event){
+    //         event.preventDefault();
+    //         const formdata = new FormData(form);
+    //         fetch('/send-message',{
+    //             method:POST,
+    //             body:formdata,
+    //             headers:{
+    //                 'X-CRSF-Token':document.querySelector('meta[name="crsf-token"]').getAttribute('content');
+    //             }
+    //         })
+    //     })
+    // })
 </script>

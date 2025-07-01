@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -17,10 +18,10 @@ class SendMessage extends Mailable
      * Create a new message instance.
      */
     public function __construct(
-        private string $name,
-        private string $subject,
-        private string $email,
-        private string $message,
+        public string $name,
+        public string $email,
+        public string $message,
+        public string $subject,
     )
     {
         //
@@ -33,7 +34,7 @@ class SendMessage extends Mailable
     {
         return new Envelope(
             subject: $this->subject,
-            from: $this->email,
+            from: new Address($this->email, $this->name),
         );
     }
 

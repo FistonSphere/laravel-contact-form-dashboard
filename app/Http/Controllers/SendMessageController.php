@@ -10,7 +10,6 @@ class SendMessageController extends Controller
 {
     public function send(Request $request)
     {
-        dd($request->all());
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',

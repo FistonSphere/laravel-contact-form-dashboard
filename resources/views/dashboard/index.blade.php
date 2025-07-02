@@ -43,8 +43,8 @@
     </div>
     <div class="btn">
         <div class="show">
-            //show button
-            <button>Show Button</button>
+
+            <button>Show Messages</button>
         </div>
     </div>
 </div>

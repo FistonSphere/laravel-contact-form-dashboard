@@ -43,6 +43,11 @@ class SendMessageController extends Controller
 
     public function showMessages(){
         $message = MailMessage::all();
+//check role from middleware
+if()
+
+
+
         if($message->isEmpty()){
             return redirect()->back()->with('error', 'No messages found');
         }else{

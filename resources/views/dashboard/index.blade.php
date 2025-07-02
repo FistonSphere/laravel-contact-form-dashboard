@@ -44,7 +44,10 @@
     <div class="btn">
         <div class="show">
 
-            <button>Show Messages</button>
+          <form action="{{ route('showMessages') }}" method="get">
+            @csrf
+            <button type="submit">Show Message</button>
+          </form>
         </div>
     </div>
 </div>

@@ -29,4 +29,5 @@ Route::post('logout', function(){
 })->name('logout');
 
 Route::post('/send-message', [SendMessageController::class, 'send'])->name('send.message');
+Route::get('/show-messages', [SendMessageController::class, 'showMessages'])->name('showMessages');
 });

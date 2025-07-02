@@ -40,4 +40,13 @@ class SendMessageController extends Controller
             return redirect()->back()->with('error', 'All fields are required');
         }
     }
+
+    public function showMessages(){
+        $message = MailMessage::all();
+        if($message->isEmpty()){
+            return redirect()->back()->with('error', 'No messages found');
+        }else{
+            return view('dashboard.showMessage', compact('message'));
+        }
+    }
 }

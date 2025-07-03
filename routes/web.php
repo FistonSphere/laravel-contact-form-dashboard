@@ -30,12 +30,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::post('/send-message', [SendMessageController::class, 'send'])->name('send.message');
 
-    Route::get('/show-messages', function () {
-        if (auth()->user() && auth()->user()->isAdmin()) {
-            return app(SendMessageController::class)->showMessages();
-        } else {
-            abort(403, 'Unauthorized action.');
-        }
-    })->name('showMessages');
-
+    // Route::group(['middleware' => 'IsAdmin'], function () {
+    Route::get('/show-messages', [SendMessageController::class, 'showMessages'])->name('showMessages');
+    // });
 });

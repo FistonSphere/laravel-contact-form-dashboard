@@ -15,11 +15,10 @@ class IsAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-       if($request->user() && $request->user()->role !=='admin'){
-        return redirect()->route('dashboard')->with('error', 'you do not have the admin access🙅‍♂️');
-       }else{
-
-           return $next($request);
-       }
+        if (auth()->user() && auth()->user()->role == 'admin') {
+            return $next($request);
+        } else {
+            return redirect()->route('dashboard')->with('error', 'you do not have the admin access🙅‍♂️');
+        }
     }
 }

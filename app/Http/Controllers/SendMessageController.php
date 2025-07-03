@@ -44,18 +44,6 @@ class SendMessageController extends Controller
     public function showMessages()
     {
         $message = MailMessage::all();
-        //check role from middleware
-        if (['middleware' => 'IsAdmin']) {
-            return redirect()->back()->with('error', 'You do not have admin access 🙅‍♂️');
-        }else{
-            return view('dashboard.index', compact('message'));
-
-        }
-
-
-
-
-
-
+            return redirect()->back()->with('success', 'You have admin access ✅');
     }
 }

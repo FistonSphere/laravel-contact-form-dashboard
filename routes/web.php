@@ -30,7 +30,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::post('/send-message', [SendMessageController::class, 'send'])->name('send.message');
 
-    Route::group(['middleware' => 'IsAdmin'], function () {
-        Route::get('/show-messages', [SendMessageController::class, 'showMessages'])->name('showMessages');
+    Route::middleware('IsAdmin')->group(function () {
+        Route::get('/show-messages', [SendMessageController::class, 'showMessages'])->name('show.messages');
     });
 });

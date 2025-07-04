@@ -1,10 +1,5 @@
 <style>
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-
+  
     .alert {
         padding: 10px;
         margin: 10px 0;
@@ -23,8 +18,6 @@
         color: #721c24;
         border: 1px solid #f5c6cb;
     }
-
-   
 </style>
 
 @if (session('success'))
@@ -36,6 +29,10 @@
         <p>{{ session('error') }}</p>
     </div>
 @endif
+
+<head>
+    <link rel="stylesheet" href="{{ asset('assets/css/auth.css') }}">
+</head>
 <div class="container">
 
     <div class="contact-form">

@@ -31,6 +31,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/send-message', [SendMessageController::class, 'send'])->name('send.message');
 
     Route::middleware(['auth','IsAdmin'])->group(function () {
-        Route::get('/show-messages', [SendMessageController::class, 'showMessages'])->name('show.messages');
+        Route::get('/show-messages', [SendMessageController::class, 'showMessages'])->name('showMessages');
     });
 });

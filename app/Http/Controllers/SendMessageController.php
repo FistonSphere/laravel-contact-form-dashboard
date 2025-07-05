@@ -43,7 +43,7 @@ class SendMessageController extends Controller
 
     public function showMessages()
     {
-        $message = MailMessage::all();
+        // $message = MailMessage::all();
             return redirect()->back()->with('success', 'You have admin access ✅');
     }
 }

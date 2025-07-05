@@ -1,5 +1,5 @@
 <style>
-  
+
     .alert {
         padding: 10px;
         margin: 10px 0;
@@ -17,6 +17,11 @@
         background-color: #f8d7da;
         color: #721c24;
         border: 1px solid #f5c6cb;
+    }
+    .container{
+        padding: 20px;
+        max-width: 600px;
+        margin: 0 auto;
     }
 </style>
 

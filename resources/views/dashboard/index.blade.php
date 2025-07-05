@@ -1,6 +1,6 @@
 <style>
 
-    .alert {
+    /* .alert {
         padding: 10px;
         margin: 10px 0;
         border-radius: 5px;
@@ -17,11 +17,12 @@
         background-color: #f8d7da;
         color: #721c24;
         border: 1px solid #f5c6cb;
+    } */
+    .contact-form{
+        margin: auto 10;
     }
-    .container{
-        padding: 20px;
-        max-width: 600px;
-        margin: 0 auto;
+    .show button{
+        margin-top: 150px;
     }
 </style>
 
@@ -64,8 +65,8 @@
             </div>
         </form>
     </div>
-    <div class="btn">
-        <div class="show">
+    <div class="btn2">
+        <div class="show2">
 
             <form action="{{ route('showMessages') }}" method="get">
                 @csrf
